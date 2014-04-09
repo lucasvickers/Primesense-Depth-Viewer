@@ -466,9 +466,9 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/lucasvickers/Documents/DepthRecorder/libs,
-					"/Users/lucasvickers/Documents/DepthRecorder/blocks/Cinder-OpenNI/lib/macosx/OpenNI2/OpenNI2/Drivers",
-					"/Users/lucasvickers/Documents/DepthRecorder/blocks/Cinder-OpenNI/lib/macosx/OpenNI2",
+					../libs,
+					"../blocks/Cinder-OpenNI/lib/macosx/OpenNI2/OpenNI2/Drivers",
+					"../blocks/Cinder-OpenNI/lib/macosx/OpenNI2",
 				);
 				OTHER_LDFLAGS = (
 					"\"$(CINDER_PATH)/lib/libcinder_d.a\"",
@@ -504,9 +504,9 @@
 				INSTALL_PATH = "$(HOME)/Applications";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					/Users/lucasvickers/Documents/DepthRecorder/libs,
-					"/Users/lucasvickers/Documents/DepthRecorder/blocks/Cinder-OpenNI/lib/macosx/OpenNI2/OpenNI2/Drivers",
-					"/Users/lucasvickers/Documents/DepthRecorder/blocks/Cinder-OpenNI/lib/macosx/OpenNI2",
+					../libs,
+					"../blocks/Cinder-OpenNI/lib/macosx/OpenNI2/OpenNI2/Drivers",
+					"../blocks/Cinder-OpenNI/lib/macosx/OpenNI2",
 				);
 				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder.a\"";
 				PRODUCT_NAME = DepthRecorder;

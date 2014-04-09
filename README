@@ -2,7 +2,11 @@ Small project for accessing primesense/kinect using the libfreenect 0.1 drivers
 Heavily relies on the Cinder-OpenNI repo
 
 
-::Checkout submodule::
+::Checkout submodule, and it should work::
+
+
+if not...
+
 
 Follow build instructions at
 https://github.com/heisters/Cinder-OpenNI

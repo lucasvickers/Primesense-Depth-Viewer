@@ -24,6 +24,7 @@ private:
     gl::Texture mDepthTex;
     gl::Texture mColorTex;
     bool mRecording;
+    bool mColor;
     
     Font mFont;
 
@@ -72,6 +73,7 @@ void DepthRecorderApp::setup()
 {
     mCamera.setup( ci::openni::Camera::SENSOR_DEPTH | ci::openni::Camera::SENSOR_COLOR );
     mRecording = false;
+    mColor = false;
     
     mFont = Font("Arial", 30);
 }
@@ -80,6 +82,9 @@ void DepthRecorderApp::keyDown( KeyEvent event )
 {
     if(event.getChar() == ' ') {
         mRecording = ! mRecording;
+    }
+    if(event.getChar() == 'c') {
+        mColor = ! mColor;
     }
 }
 
@@ -91,14 +96,18 @@ void DepthRecorderApp::update()
 {
     mCamera.update();
     mDepthTex = mCamera.getDepthTex();
-    mColorTex = mCamera.getColorTex();
+    if(mColor) {
+        mColorTex = mCamera.getColorTex();
+    }
     
     stringstream ss;
     ss << MSEpoch();
     
     if(mRecording) {
         writeImage( getDocumentsDirectory() / fs::path("_Depth") / (ss.str() + "-depth.png"), mDepthTex );
-        writeImage( getDocumentsDirectory() / fs::path("_Depth") / (ss.str() + "-color.jpg"), mColorTex );
+        if(mColor) {
+            writeImage( getDocumentsDirectory() / fs::path("_Depth") / (ss.str() + "-color.jpg"), mColorTex );
+        }
     }
     
 }
@@ -111,7 +120,9 @@ void DepthRecorderApp::draw()
     
     gl::draw( mDepthTex, Rectf( 0, 0, 640, 480 ) );
     //gl::draw( camera.getRawDepthTex(), Rectf( 0, 0, 640, 480 ) );
-    gl::draw( mColorTex, Rectf( 640, 0, 1280, 480 ) );
+    if(mColor) {
+        gl::draw( mColorTex, Rectf( 640, 0, 1280, 480 ) );
+    }
     
     stringstream ss;
     ss.precision(1);
