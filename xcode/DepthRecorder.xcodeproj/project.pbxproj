@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 44;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,12 +14,56 @@
 		00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00B784B20FF439BC000DE1D7 /* CoreAudio.framework */; };
 		5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B10EAFCA74003A9687 /* CoreVideo.framework */; };
 		5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5323E6B50EAFCA7E003A9687 /* QTKit.framework */; };
+		5FB2544718F4F8320030B5F1 /* OpenNI.ini in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FB2544418F4F8110030B5F1 /* OpenNI.ini */; };
+		5FB2544818F4F86C0030B5F1 /* libDummyDevice.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB57A3D18F4F38F0048BFA4 /* libDummyDevice.dylib */; };
+		5FB2544918F4F86C0030B5F1 /* libFreenectDriver.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB57A3E18F4F38F0048BFA4 /* libFreenectDriver.dylib */; };
+		5FB2544A18F4F86C0030B5F1 /* libOniFile.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB57A3F18F4F38F0048BFA4 /* libOniFile.dylib */; };
+		5FB2544B18F4F86C0030B5F1 /* libPS1080.dylib in Resources */ = {isa = PBXBuildFile; fileRef = 5FB57A4018F4F38F0048BFA4 /* libPS1080.dylib */; };
+		5FB57A4118F4F38F0048BFA4 /* libDummyDevice.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB57A3D18F4F38F0048BFA4 /* libDummyDevice.dylib */; };
+		5FB57A4218F4F38F0048BFA4 /* libFreenectDriver.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB57A3E18F4F38F0048BFA4 /* libFreenectDriver.dylib */; };
+		5FB57A4318F4F38F0048BFA4 /* libOniFile.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB57A3F18F4F38F0048BFA4 /* libOniFile.dylib */; };
+		5FB57A4418F4F38F0048BFA4 /* libPS1080.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB57A4018F4F38F0048BFA4 /* libPS1080.dylib */; };
+		5FB57A4618F4F3B60048BFA4 /* libDummyDevice.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FB57A3D18F4F38F0048BFA4 /* libDummyDevice.dylib */; };
+		5FB57A4718F4F3B60048BFA4 /* libFreenectDriver.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FB57A3E18F4F38F0048BFA4 /* libFreenectDriver.dylib */; };
+		5FB57A4818F4F3B60048BFA4 /* libOniFile.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FB57A3F18F4F38F0048BFA4 /* libOniFile.dylib */; };
+		5FB57A4918F4F3B60048BFA4 /* libPS1080.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FB57A4018F4F38F0048BFA4 /* libPS1080.dylib */; };
+		5FB57AE418F4F4E20048BFA4 /* Camera.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5FB57AB718F4F4E20048BFA4 /* Camera.cpp */; };
+		5FB57AEA18F4F5C00048BFA4 /* libfreenect.0.1.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB57AE818F4F5C00048BFA4 /* libfreenect.0.1.2.dylib */; };
+		5FB57AEB18F4F5C00048BFA4 /* libfreenect.0.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB57AE918F4F5C00048BFA4 /* libfreenect.0.1.dylib */; };
+		5FB57AEC18F4F5C70048BFA4 /* libfreenect.0.1.2.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FB57AE818F4F5C00048BFA4 /* libfreenect.0.1.2.dylib */; };
+		5FB57AED18F4F5C70048BFA4 /* libfreenect.0.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FB57AE918F4F5C00048BFA4 /* libfreenect.0.1.dylib */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
-		5A5F88D60E9A4E7FBE314CBB /* DepthRecorder_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = B9B6E20FF4C44F24967BF94B /* DepthRecorder_Prefix.pch */; };
-		D6538D4686564BC3A982ADE7 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = DE58CDD67CDC4DF08C89B071 /* CinderApp.icns */; };
-		3C56090C482A4D73A3CEC632 /* Resources.h in Headers */ = {isa = PBXBuildFile; fileRef = C3A14B54A2AA450A8EB6A9B7 /* Resources.h */; };
 		D0D871E758514DA4A65273D5 /* DepthRecorderApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0C4DF8CE8454B64A16A2FC7 /* DepthRecorderApp.cpp */; };
+		D6538D4686564BC3A982ADE7 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = DE58CDD67CDC4DF08C89B071 /* CinderApp.icns */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5FB2544618F4F8240030B5F1 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 6;
+			files = (
+				5FB2544718F4F8320030B5F1 /* OpenNI.ini in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5FB57A4518F4F3A90048BFA4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 16;
+			files = (
+				5FB57AEC18F4F5C70048BFA4 /* libfreenect.0.1.2.dylib in CopyFiles */,
+				5FB57AED18F4F5C70048BFA4 /* libfreenect.0.1.dylib in CopyFiles */,
+				5FB57A4618F4F3B60048BFA4 /* libDummyDevice.dylib in CopyFiles */,
+				5FB57A4718F4F3B60048BFA4 /* libFreenectDriver.dylib in CopyFiles */,
+				5FB57A4818F4F3B60048BFA4 /* libOniFile.dylib in CopyFiles */,
+				5FB57A4918F4F3B60048BFA4 /* libPS1080.dylib in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0091D8F80E81B9330029341E /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = /System/Library/Frameworks/OpenGL.framework; sourceTree = "<absolute>"; };
@@ -30,14 +74,45 @@
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		29B97324FDCFA39411CA2CEA /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = /System/Library/Frameworks/AppKit.framework; sourceTree = "<absolute>"; };
 		29B97325FDCFA39411CA2CEA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = /System/Library/Frameworks/Foundation.framework; sourceTree = "<absolute>"; };
+		2CFA5FA2956D4E11833CA8DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5323E6B10EAFCA74003A9687 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = /System/Library/Frameworks/CoreVideo.framework; sourceTree = "<absolute>"; };
 		5323E6B50EAFCA7E003A9687 /* QTKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QTKit.framework; path = /System/Library/Frameworks/QTKit.framework; sourceTree = "<absolute>"; };
+		5FB2544418F4F8110030B5F1 /* OpenNI.ini */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = OpenNI.ini; path = ../resources/OpenNI.ini; sourceTree = "<group>"; };
+		5FB57A3D18F4F38F0048BFA4 /* libDummyDevice.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libDummyDevice.dylib; path = "../blocks/Cinder-OpenNI/lib/macosx/OpenNI2/OpenNI2/Drivers/libDummyDevice.dylib"; sourceTree = "<group>"; };
+		5FB57A3E18F4F38F0048BFA4 /* libFreenectDriver.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libFreenectDriver.dylib; path = "../blocks/Cinder-OpenNI/lib/macosx/OpenNI2/OpenNI2/Drivers/libFreenectDriver.dylib"; sourceTree = "<group>"; };
+		5FB57A3F18F4F38F0048BFA4 /* libOniFile.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libOniFile.dylib; path = "../blocks/Cinder-OpenNI/lib/macosx/OpenNI2/OpenNI2/Drivers/libOniFile.dylib"; sourceTree = "<group>"; };
+		5FB57A4018F4F38F0048BFA4 /* libPS1080.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libPS1080.dylib; path = "../blocks/Cinder-OpenNI/lib/macosx/OpenNI2/OpenNI2/Drivers/libPS1080.dylib"; sourceTree = "<group>"; };
+		5FB57A5018F4F4E10048BFA4 /* Camera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Camera.h; sourceTree = "<group>"; };
+		5FB57A5118F4F4E10048BFA4 /* CinderOpenNI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CinderOpenNI.h; sourceTree = "<group>"; };
+		5FB57A5318F4F4E10048BFA4 /* libfreenect-registration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "libfreenect-registration.h"; sourceTree = "<group>"; };
+		5FB57A5418F4F4E10048BFA4 /* libfreenect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libfreenect.h; sourceTree = "<group>"; };
+		5FB57A5518F4F4E10048BFA4 /* libfreenect_sync.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libfreenect_sync.h; sourceTree = "<group>"; };
+		5FB57A5618F4F4E10048BFA4 /* libfreenect.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = libfreenect.hpp; sourceTree = "<group>"; };
+		5FB57A5918F4F4E10048BFA4 /* OniPlatformAndroid-Arm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OniPlatformAndroid-Arm.h"; sourceTree = "<group>"; };
+		5FB57A5B18F4F4E10048BFA4 /* OniDriverAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OniDriverAPI.h; sourceTree = "<group>"; };
+		5FB57A5C18F4F4E10048BFA4 /* OniDriverTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OniDriverTypes.h; sourceTree = "<group>"; };
+		5FB57A5E18F4F4E10048BFA4 /* OniPlatformLinux-Arm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OniPlatformLinux-Arm.h"; sourceTree = "<group>"; };
+		5FB57A6018F4F4E10048BFA4 /* OniPlatformLinux-x86.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "OniPlatformLinux-x86.h"; sourceTree = "<group>"; };
+		5FB57A6218F4F4E10048BFA4 /* OniPlatformMacOSX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OniPlatformMacOSX.h; sourceTree = "<group>"; };
+		5FB57A6318F4F4E10048BFA4 /* OniCAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OniCAPI.h; sourceTree = "<group>"; };
+		5FB57A6418F4F4E10048BFA4 /* OniCEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OniCEnums.h; sourceTree = "<group>"; };
+		5FB57A6518F4F4E10048BFA4 /* OniCProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OniCProperties.h; sourceTree = "<group>"; };
+		5FB57A6618F4F4E10048BFA4 /* OniCTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OniCTypes.h; sourceTree = "<group>"; };
+		5FB57A6718F4F4E10048BFA4 /* OniEnums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OniEnums.h; sourceTree = "<group>"; };
+		5FB57A6818F4F4E10048BFA4 /* OniPlatform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OniPlatform.h; sourceTree = "<group>"; };
+		5FB57A6918F4F4E10048BFA4 /* OniProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OniProperties.h; sourceTree = "<group>"; };
+		5FB57A6A18F4F4E10048BFA4 /* OniVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OniVersion.h; sourceTree = "<group>"; };
+		5FB57A6B18F4F4E10048BFA4 /* OpenNI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenNI.h; sourceTree = "<group>"; };
+		5FB57A6C18F4F4E10048BFA4 /* PS1080.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PS1080.h; sourceTree = "<group>"; };
+		5FB57A6E18F4F4E10048BFA4 /* OniPlatformWin32.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OniPlatformWin32.h; sourceTree = "<group>"; };
+		5FB57AB718F4F4E20048BFA4 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
+		5FB57AE818F4F5C00048BFA4 /* libfreenect.0.1.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfreenect.0.1.2.dylib; path = ../libs/libfreenect.0.1.2.dylib; sourceTree = "<group>"; };
+		5FB57AE918F4F5C00048BFA4 /* libfreenect.0.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfreenect.0.1.dylib; path = ../libs/libfreenect.0.1.dylib; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* DepthRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepthRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D0C4DF8CE8454B64A16A2FC7 /* DepthRecorderApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; path = ../src/DepthRecorderApp.cpp; sourceTree = "<group>"; name = DepthRecorderApp.cpp; };
-		C3A14B54A2AA450A8EB6A9B7 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ../include/Resources.h; sourceTree = "<group>"; name = Resources.h; };
-		DE58CDD67CDC4DF08C89B071 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; name = CinderApp.icns; };
-		2CFA5FA2956D4E11833CA8DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; name = Info.plist; };
-		B9B6E20FF4C44F24967BF94B /* DepthRecorder_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = DepthRecorder_Prefix.pch; sourceTree = "<group>"; name = DepthRecorder_Prefix.pch; };
+		B9B6E20FF4C44F24967BF94B /* DepthRecorder_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = DepthRecorder_Prefix.pch; sourceTree = "<group>"; };
+		C3A14B54A2AA450A8EB6A9B7 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
+		D0C4DF8CE8454B64A16A2FC7 /* DepthRecorderApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.cpp; name = DepthRecorderApp.cpp; path = ../src/DepthRecorderApp.cpp; sourceTree = "<group>"; };
+		DE58CDD67CDC4DF08C89B071 /* CinderApp.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = CinderApp.icns; path = ../resources/CinderApp.icns; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,17 +123,31 @@
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
 				0091D8F90E81B9330029341E /* OpenGL.framework in Frameworks */,
 				5323E6B20EAFCA74003A9687 /* CoreVideo.framework in Frameworks */,
+				5FB57A4218F4F38F0048BFA4 /* libFreenectDriver.dylib in Frameworks */,
 				5323E6B60EAFCA7E003A9687 /* QTKit.framework in Frameworks */,
 				00B784B30FF439BC000DE1D7 /* Accelerate.framework in Frameworks */,
 				00B784B40FF439BC000DE1D7 /* AudioToolbox.framework in Frameworks */,
 				00B784B50FF439BC000DE1D7 /* AudioUnit.framework in Frameworks */,
 				00B784B60FF439BC000DE1D7 /* CoreAudio.framework in Frameworks */,
+				5FB57AEB18F4F5C00048BFA4 /* libfreenect.0.1.dylib in Frameworks */,
+				5FB57A4118F4F38F0048BFA4 /* libDummyDevice.dylib in Frameworks */,
+				5FB57AEA18F4F5C00048BFA4 /* libfreenect.0.1.2.dylib in Frameworks */,
+				5FB57A4418F4F38F0048BFA4 /* libPS1080.dylib in Frameworks */,
+				5FB57A4318F4F38F0048BFA4 /* libOniFile.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01B97315FEAEA392516A2CEA /* Blocks */ = {
+			isa = PBXGroup;
+			children = (
+				5FB57A4C18F4F4E10048BFA4 /* Cinder-OpenNI */,
+			);
+			name = Blocks;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* Source */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,15 +197,9 @@
 				29B97317FDCFA39411CA2CEA /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
 				19C28FACFE9D520D11CA2CBB /* Products */,
+				5FB57A3818F4F3540048BFA4 /* libs */,
 			);
 			name = DepthRecorder;
-			sourceTree = "<group>";
-		};
-		01B97315FEAEA392516A2CEA /* Blocks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Blocks;
 			sourceTree = "<group>";
 		};
 		29B97315FDCFA39411CA2CEA /* Headers */ = {
@@ -131,6 +214,7 @@
 		29B97317FDCFA39411CA2CEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				5FB2544418F4F8110030B5F1 /* OpenNI.ini */,
 				DE58CDD67CDC4DF08C89B071 /* CinderApp.icns */,
 				2CFA5FA2956D4E11833CA8DB /* Info.plist */,
 			);
@@ -146,6 +230,139 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5FB57A3818F4F3540048BFA4 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				5FB57AE818F4F5C00048BFA4 /* libfreenect.0.1.2.dylib */,
+				5FB57AE918F4F5C00048BFA4 /* libfreenect.0.1.dylib */,
+				5FB57A3D18F4F38F0048BFA4 /* libDummyDevice.dylib */,
+				5FB57A3E18F4F38F0048BFA4 /* libFreenectDriver.dylib */,
+				5FB57A3F18F4F38F0048BFA4 /* libOniFile.dylib */,
+				5FB57A4018F4F38F0048BFA4 /* libPS1080.dylib */,
+			);
+			name = libs;
+			sourceTree = "<group>";
+		};
+		5FB57A4C18F4F4E10048BFA4 /* Cinder-OpenNI */ = {
+			isa = PBXGroup;
+			children = (
+				5FB57A4E18F4F4E10048BFA4 /* include */,
+				5FB57AB618F4F4E20048BFA4 /* src */,
+			);
+			name = "Cinder-OpenNI";
+			path = "../blocks/Cinder-OpenNI";
+			sourceTree = "<group>";
+		};
+		5FB57A4E18F4F4E10048BFA4 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				5FB57A4F18F4F4E10048BFA4 /* CinderOpenNI */,
+				5FB57A5118F4F4E10048BFA4 /* CinderOpenNI.h */,
+				5FB57A5218F4F4E10048BFA4 /* libfreenect */,
+				5FB57A5618F4F4E10048BFA4 /* libfreenect.hpp */,
+				5FB57A5718F4F4E10048BFA4 /* OpenNI2 */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		5FB57A4F18F4F4E10048BFA4 /* CinderOpenNI */ = {
+			isa = PBXGroup;
+			children = (
+				5FB57A5018F4F4E10048BFA4 /* Camera.h */,
+			);
+			path = CinderOpenNI;
+			sourceTree = "<group>";
+		};
+		5FB57A5218F4F4E10048BFA4 /* libfreenect */ = {
+			isa = PBXGroup;
+			children = (
+				5FB57A5318F4F4E10048BFA4 /* libfreenect-registration.h */,
+				5FB57A5418F4F4E10048BFA4 /* libfreenect.h */,
+				5FB57A5518F4F4E10048BFA4 /* libfreenect_sync.h */,
+			);
+			path = libfreenect;
+			sourceTree = "<group>";
+		};
+		5FB57A5718F4F4E10048BFA4 /* OpenNI2 */ = {
+			isa = PBXGroup;
+			children = (
+				5FB57A5818F4F4E10048BFA4 /* Android-Arm */,
+				5FB57A5A18F4F4E10048BFA4 /* Driver */,
+				5FB57A5D18F4F4E10048BFA4 /* Linux-Arm */,
+				5FB57A5F18F4F4E10048BFA4 /* Linux-x86 */,
+				5FB57A6118F4F4E10048BFA4 /* MacOSX */,
+				5FB57A6318F4F4E10048BFA4 /* OniCAPI.h */,
+				5FB57A6418F4F4E10048BFA4 /* OniCEnums.h */,
+				5FB57A6518F4F4E10048BFA4 /* OniCProperties.h */,
+				5FB57A6618F4F4E10048BFA4 /* OniCTypes.h */,
+				5FB57A6718F4F4E10048BFA4 /* OniEnums.h */,
+				5FB57A6818F4F4E10048BFA4 /* OniPlatform.h */,
+				5FB57A6918F4F4E10048BFA4 /* OniProperties.h */,
+				5FB57A6A18F4F4E10048BFA4 /* OniVersion.h */,
+				5FB57A6B18F4F4E10048BFA4 /* OpenNI.h */,
+				5FB57A6C18F4F4E10048BFA4 /* PS1080.h */,
+				5FB57A6D18F4F4E10048BFA4 /* Win32 */,
+			);
+			path = OpenNI2;
+			sourceTree = "<group>";
+		};
+		5FB57A5818F4F4E10048BFA4 /* Android-Arm */ = {
+			isa = PBXGroup;
+			children = (
+				5FB57A5918F4F4E10048BFA4 /* OniPlatformAndroid-Arm.h */,
+			);
+			path = "Android-Arm";
+			sourceTree = "<group>";
+		};
+		5FB57A5A18F4F4E10048BFA4 /* Driver */ = {
+			isa = PBXGroup;
+			children = (
+				5FB57A5B18F4F4E10048BFA4 /* OniDriverAPI.h */,
+				5FB57A5C18F4F4E10048BFA4 /* OniDriverTypes.h */,
+			);
+			path = Driver;
+			sourceTree = "<group>";
+		};
+		5FB57A5D18F4F4E10048BFA4 /* Linux-Arm */ = {
+			isa = PBXGroup;
+			children = (
+				5FB57A5E18F4F4E10048BFA4 /* OniPlatformLinux-Arm.h */,
+			);
+			path = "Linux-Arm";
+			sourceTree = "<group>";
+		};
+		5FB57A5F18F4F4E10048BFA4 /* Linux-x86 */ = {
+			isa = PBXGroup;
+			children = (
+				5FB57A6018F4F4E10048BFA4 /* OniPlatformLinux-x86.h */,
+			);
+			path = "Linux-x86";
+			sourceTree = "<group>";
+		};
+		5FB57A6118F4F4E10048BFA4 /* MacOSX */ = {
+			isa = PBXGroup;
+			children = (
+				5FB57A6218F4F4E10048BFA4 /* OniPlatformMacOSX.h */,
+			);
+			path = MacOSX;
+			sourceTree = "<group>";
+		};
+		5FB57A6D18F4F4E10048BFA4 /* Win32 */ = {
+			isa = PBXGroup;
+			children = (
+				5FB57A6E18F4F4E10048BFA4 /* OniPlatformWin32.h */,
+			);
+			path = Win32;
+			sourceTree = "<group>";
+		};
+		5FB57AB618F4F4E20048BFA4 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5FB57AB718F4F4E20048BFA4 /* Camera.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -156,6 +373,8 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				5FB57A4518F4F3A90048BFA4 /* CopyFiles */,
+				5FB2544618F4F8240030B5F1 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -172,6 +391,8 @@
 /* Begin PBXProject section */
 		29B97313FDCFA39411CA2CEA /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "DepthRecorder" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -196,6 +417,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5FB2544818F4F86C0030B5F1 /* libDummyDevice.dylib in Resources */,
+				5FB2544918F4F86C0030B5F1 /* libFreenectDriver.dylib in Resources */,
+				5FB2544A18F4F86C0030B5F1 /* libOniFile.dylib in Resources */,
+				5FB2544B18F4F86C0030B5F1 /* libPS1080.dylib in Resources */,
 				D6538D4686564BC3A982ADE7 /* CinderApp.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -208,6 +433,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D0D871E758514DA4A65273D5 /* DepthRecorderApp.cpp in Sources */,
+				5FB57AE418F4F4E20048BFA4 /* Camera.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,31 +443,48 @@
 		C01FCF4B08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
-				DEAD_CODE_STRIPPING = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = DepthRecorder_Prefix.pch;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = DepthRecorder_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"\"$(CINDER_PATH)/boost\"",
+					"../blocks/Cinder-OpenNI/include",
+					"../blocks/Cinder-OpenNI/include/OpenNI2",
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
-				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder_d.a\"";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/lucasvickers/Documents/DepthRecorder/libs,
+					"/Users/lucasvickers/Documents/DepthRecorder/blocks/Cinder-OpenNI/lib/macosx/OpenNI2/OpenNI2/Drivers",
+					"/Users/lucasvickers/Documents/DepthRecorder/blocks/Cinder-OpenNI/lib/macosx/OpenNI2",
+				);
+				OTHER_LDFLAGS = (
+					"\"$(CINDER_PATH)/lib/libcinder_d.a\"",
+					"../blocks/Cinder-OpenNI/lib/macosx/OpenNI2/libOpenNI2.a",
+					"../blocks/Cinder-OpenNI/lib/macosx/OpenNI2/libXnLib.a",
+				);
 				PRODUCT_NAME = DepthRecorder;
-				WRAPPER_EXTENSION = app;
 				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
 		};
 		C01FCF4C08A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -252,24 +495,35 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = DepthRecorder_Prefix.pch;
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"\"$(CINDER_PATH)/boost\"",
+					"../blocks/Cinder-OpenNI/include",
+					"../blocks/Cinder-OpenNI/include/OpenNI2",
+				);
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Applications";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/lucasvickers/Documents/DepthRecorder/libs,
+					"/Users/lucasvickers/Documents/DepthRecorder/blocks/Cinder-OpenNI/lib/macosx/OpenNI2/OpenNI2/Drivers",
+					"/Users/lucasvickers/Documents/DepthRecorder/blocks/Cinder-OpenNI/lib/macosx/OpenNI2",
+				);
 				OTHER_LDFLAGS = "\"$(CINDER_PATH)/lib/libcinder.a\"";
 				PRODUCT_NAME = DepthRecorder;
 				STRIP_INSTALLED_PRODUCT = YES;
-				WRAPPER_EXTENSION = app;
 				SYMROOT = ./build;
+				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
 		C01FCF4F08A954540054247B /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = i386;
-				CINDER_PATH = "../../../../../usr/Cinder";
+				CINDER_PATH = ../../../../../usr/Cinder;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";
@@ -282,11 +536,11 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
-				CLANG_CXX_LIBRARY = "libc++";
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ARCHS = i386;
-				CINDER_PATH = "../../../../../usr/Cinder";
+				CINDER_PATH = ../../../../../usr/Cinder;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libc++";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				HEADER_SEARCH_PATHS = "\"$(CINDER_PATH)/boost\"";

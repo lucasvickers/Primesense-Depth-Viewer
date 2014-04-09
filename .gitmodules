@@ -1,0 +1,3 @@
+[submodule "blocks/Cinder-OpenNI"]
+	path = blocks/Cinder-OpenNI
+	url = https://github.com/heisters/Cinder-OpenNI.git
