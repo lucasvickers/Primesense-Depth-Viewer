@@ -1,3 +1,6 @@
 [submodule "blocks/Cinder-OpenNI"]
 	path = blocks/Cinder-OpenNI
 	url = https://github.com/heisters/Cinder-OpenNI.git
+[submodule "blocks/MSEpoch"]
+	path = blocks/MSEpoch
+	url = git@github.com:lucasvickers/MSEpoch.git

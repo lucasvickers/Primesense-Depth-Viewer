@@ -32,6 +32,7 @@
 		5FB57AEB18F4F5C00048BFA4 /* libfreenect.0.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FB57AE918F4F5C00048BFA4 /* libfreenect.0.1.dylib */; };
 		5FB57AEC18F4F5C70048BFA4 /* libfreenect.0.1.2.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FB57AE818F4F5C00048BFA4 /* libfreenect.0.1.2.dylib */; };
 		5FB57AED18F4F5C70048BFA4 /* libfreenect.0.1.dylib in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5FB57AE918F4F5C00048BFA4 /* libfreenect.0.1.dylib */; };
+		5FBB8C061931913F002492B3 /* mode.json in Resources */ = {isa = PBXBuildFile; fileRef = 5FBB8C051931913F002492B3 /* mode.json */; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 		D0D871E758514DA4A65273D5 /* DepthRecorderApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D0C4DF8CE8454B64A16A2FC7 /* DepthRecorderApp.cpp */; };
 		D6538D4686564BC3A982ADE7 /* CinderApp.icns in Resources */ = {isa = PBXBuildFile; fileRef = DE58CDD67CDC4DF08C89B071 /* CinderApp.icns */; };
@@ -108,6 +109,8 @@
 		5FB57AB718F4F4E20048BFA4 /* Camera.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Camera.cpp; sourceTree = "<group>"; };
 		5FB57AE818F4F5C00048BFA4 /* libfreenect.0.1.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfreenect.0.1.2.dylib; path = ../libs/libfreenect.0.1.2.dylib; sourceTree = "<group>"; };
 		5FB57AE918F4F5C00048BFA4 /* libfreenect.0.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libfreenect.0.1.dylib; path = ../libs/libfreenect.0.1.dylib; sourceTree = "<group>"; };
+		5FBB8C0219318CA4002492B3 /* msEpoch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msEpoch.h; sourceTree = "<group>"; };
+		5FBB8C051931913F002492B3 /* mode.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = mode.json; path = ../assets/mode.json; sourceTree = "<group>"; };
 		8D1107320486CEB800E47090 /* DepthRecorder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DepthRecorder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9B6E20FF4C44F24967BF94B /* DepthRecorder_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = "\"\""; path = DepthRecorder_Prefix.pch; sourceTree = "<group>"; };
 		C3A14B54A2AA450A8EB6A9B7 /* Resources.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Resources.h; path = ../include/Resources.h; sourceTree = "<group>"; };
@@ -143,6 +146,7 @@
 		01B97315FEAEA392516A2CEA /* Blocks */ = {
 			isa = PBXGroup;
 			children = (
+				5FBB8C0119318CA4002492B3 /* MSEpoch */,
 				5FB57A4C18F4F4E10048BFA4 /* Cinder-OpenNI */,
 			);
 			name = Blocks;
@@ -191,6 +195,7 @@
 		29B97314FDCFA39411CA2CEA /* DepthRecorder */ = {
 			isa = PBXGroup;
 			children = (
+				5FBB8C051931913F002492B3 /* mode.json */,
 				01B97315FEAEA392516A2CEA /* Blocks */,
 				29B97315FDCFA39411CA2CEA /* Headers */,
 				080E96DDFE201D6D7F000001 /* Source */,
@@ -363,6 +368,15 @@
 			path = src;
 			sourceTree = "<group>";
 		};
+		5FBB8C0119318CA4002492B3 /* MSEpoch */ = {
+			isa = PBXGroup;
+			children = (
+				5FBB8C0219318CA4002492B3 /* msEpoch.h */,
+			);
+			name = MSEpoch;
+			path = ../blocks/MSEpoch;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -419,6 +433,7 @@
 			files = (
 				5FB2544818F4F86C0030B5F1 /* libDummyDevice.dylib in Resources */,
 				5FB2544918F4F86C0030B5F1 /* libFreenectDriver.dylib in Resources */,
+				5FBB8C061931913F002492B3 /* mode.json in Resources */,
 				5FB2544A18F4F86C0030B5F1 /* libOniFile.dylib in Resources */,
 				5FB2544B18F4F86C0030B5F1 /* libPS1080.dylib in Resources */,
 				D6538D4686564BC3A982ADE7 /* CinderApp.icns in Resources */,
@@ -444,6 +459,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CINDER_PATH = /usr/cinder;
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
@@ -485,6 +501,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CINDER_PATH = /usr/cinder;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";

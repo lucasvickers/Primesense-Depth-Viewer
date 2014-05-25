@@ -2,10 +2,11 @@ Small project for accessing primesense/kinect using the libfreenect 0.1 drivers
 Heavily relies on the Cinder-OpenNI repo
 
 
-::Checkout submodule, and it should work::
+1 - install libusb
+2 - Checkout submodules
 
 
-if not...
+It should work, and if if not...
 
 
 Follow build instructions at
@@ -22,3 +23,4 @@ brew install libfreenect --universal
 
 
 If copying into a project be sure to do a copy phase of the dylibs
+

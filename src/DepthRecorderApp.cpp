@@ -1,6 +1,10 @@
 #include "cinder/app/AppNative.h"
 #include "cinder/gl/gl.h"
 #include "cinder/gl/Texture.h"
+#include "cinder/Json.h"
+
+#include "msEpoch.h"
+
 #include "CinderOpenNI.h"
 #include "Cinder/Utilities.h"
 
@@ -17,63 +21,41 @@ public:
 	void update();
 	void draw();
     void shutdown();
-    unsigned long long MSEpoch();
     
 private:
     ci::openni::Camera mCamera;
-    gl::Texture mDepthTex;
-    gl::Texture mColorTex;
+    gl::Texture mTex;
     bool mRecording;
     bool mColor;
-    
     Font mFont;
-
 };
 
-unsigned long long DepthRecorderApp::MSEpoch()
-{
-#if defined(WIN32) || defined(WIN64)
-    
-    FILETIME ft;
-    GetSystemTimeAsFileTime(&ft);
-    ULARGE_INTEGER ts;
-    
-    ts.HighPart = ft.dwHighDateTime;
-    ts.LowPart = ft.dwLowDateTime;
-    
-    unsigned long long time = ts.QuadPart;
-    time /= 10000;
-    //cout << time << endl;
-    
-    return time;
-    
-#else
-    
-    struct timeval tv;
-    
-    gettimeofday(&tv, NULL);
-    
-    unsigned long long millisecondsSinceEpoch =
-    (unsigned long long)(tv.tv_sec) * 1000 +
-    (unsigned long long)(tv.tv_usec) / 1000;
-    
-    // fake the MS
-    return millisecondsSinceEpoch;
-    
-#endif
-}
 
 void DepthRecorderApp::prepareSettings(Settings *settings)
 {
-    settings->setWindowSize( 1280, 480 );
+    settings->setWindowSize( 640, 480 );
     settings->setFrameRate( 30 );
 }
 
 void DepthRecorderApp::setup()
 {
-    mCamera.setup( ci::openni::Camera::SENSOR_DEPTH | ci::openni::Camera::SENSOR_COLOR );
+    try {
+
+        JsonTree mode = JsonTree(loadAsset("mode.json"));
+        mColor = mode.getChild("mode").getValue<string>() == "color";
+        
+    } catch (exception& e) {
+        console() << "Unable to parse json, defaulting to depth: " << e.what() << endl;
+        mColor = false;
+    }
+
+    if(mColor) {
+        mCamera.setup( ci::openni::Camera::SENSOR_COLOR );
+    } else {
+        mCamera.setup( ci::openni::Camera::SENSOR_DEPTH );
+    }
+    
     mRecording = false;
-    mColor = false;
     
     mFont = Font("Arial", 30);
 }
@@ -81,10 +63,20 @@ void DepthRecorderApp::setup()
 void DepthRecorderApp::keyDown( KeyEvent event )
 {
     if(event.getChar() == ' ') {
+        stringstream ss;
+        ss << MSEpoch();
+        DataTargetRef target;
+        
+        if( mRecording ) {
+            target = writeFile( getDocumentsDirectory() / fs::path("_Depth") / (ss.str() + "--STOPPED" ));
+            
+        } else {
+            target = writeFile( getDocumentsDirectory() / fs::path("_Depth") / (ss.str() + "--STARTING" ));
+        }
+        
+        target->getStream()->write(" ");
+        
         mRecording = ! mRecording;
-    }
-    if(event.getChar() == 'c') {
-        mColor = ! mColor;
     }
 }
 
@@ -95,19 +87,16 @@ void DepthRecorderApp::mouseDown( MouseEvent event )
 void DepthRecorderApp::update()
 {
     mCamera.update();
-    mDepthTex = mCamera.getDepthTex();
-    if(mColor) {
-        mColorTex = mCamera.getColorTex();
-    }
+    mTex = mColor? mCamera.getColorTex() : mCamera.getDepthTex();
     
     stringstream ss;
     ss << MSEpoch();
     
     if(mRecording) {
-        writeImage( getDocumentsDirectory() / fs::path("_Depth") / (ss.str() + "-depth.png"), mDepthTex );
-        if(mColor) {
-            writeImage( getDocumentsDirectory() / fs::path("_Depth") / (ss.str() + "-color.jpg"), mColorTex );
-        }
+        // I haven't looked inside but I'm sure the camera keeps a surface around, so let's just
+        // use their ImageSource interface
+        Surface surf = mCamera.getDepthImage();
+        writeImage( getDocumentsDirectory() / fs::path("_Depth") / (ss.str() + ".png"), surf );
     }
     
 }
@@ -118,11 +107,7 @@ void DepthRecorderApp::draw()
 	gl::clear( Color( 0, 0, 0 ) );
     
     
-    gl::draw( mDepthTex, Rectf( 0, 0, 640, 480 ) );
-    //gl::draw( camera.getRawDepthTex(), Rectf( 0, 0, 640, 480 ) );
-    if(mColor) {
-        gl::draw( mColorTex, Rectf( 640, 0, 1280, 480 ) );
-    }
+    gl::draw( mTex, Rectf( 0, 0, 640, 480 ) );
     
     stringstream ss;
     ss.precision(1);
