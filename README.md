@@ -6,8 +6,8 @@
 2. Checkout submodules
 
 #####XCode Tips
-- Check the linked .a files
-- Check that you copy the dylibs into the Products Directory (see Build Phases)
+- Check the linked .a files in 'Build Settings'
+- Check that you copy the dylibs in the 'Copy Bundle Resources' and 'Copy Files' phases
 
 #####VS Tips
 - Coming soon
