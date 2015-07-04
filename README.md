@@ -1,5 +1,5 @@
-###Small project for accessing primesense/kinect using the libfreenect 0.1 drivers
-###Heavily relies on the Cinder-OpenNI repo
+####Small project for accessing primesense/kinect using the libfreenect 0.1 drivers
+####Heavily relies on the [Cinder-OpenNI](https://github.com/heisters/Cinder-OpenNI) repo
 
 #####Steps
 1. install libusb
@@ -14,9 +14,9 @@
 
 #####It should work, and if if not...
 
-Follow build instructions at
-https://github.com/heisters/Cinder-OpenNI
-https://github.com/OpenKinect/libfreenect
+Follow build instructions at:
+- [https://github.com/heisters/Cinder-OpenNI](https://github.com/heisters/Cinder-OpenNI)
+- [https://github.com/OpenKinect/libfreenect](https://github.com/heisters/Cinder-OpenNI)
 
 #####if the included lib doesn't work right
 ```
